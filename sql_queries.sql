@@ -76,6 +76,7 @@ SELECT * FROM "Department_Manager"
 SELECT * FROM "Employee"
 SELECT * FROM "Salary"
 SELECT * FROM "Titles"
+
 1
 SELECT e.emp_no, e.last_name, e.first_name,e.sex, s.salary FROM "Employee" as e 
 Inner Join "Salary" as s
@@ -96,9 +97,9 @@ JOIN "Department_Employee" as de ON de.emp_no = e.emp_no
 JOIN "Department" as d on d.dept_no = de.dept_no;
 5
 
-SELECT last_name, first_name, sex 
-FROM "Employee"
-WHERE first_name = "%H" and last_name = "%B";
+SELECT first_name, last_name, sex 
+FROM "Employee" 
+WHERE first_name = 'Hercules' and last_name LIKE '%B';
 
 6
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
